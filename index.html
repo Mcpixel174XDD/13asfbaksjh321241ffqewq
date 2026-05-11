@@ -15,33 +15,34 @@ button:hover{background:#3a55d0}
 <h1>FAJNR LORE</h1>
 <p>Aky bol prvý co-owner?</p>
 
-<button onclick="x()">Odomknúť vstup</button>
-<div id="a"></div>
+<button onclick="a()">Odomknúť vstup</button>
+<div id="b"></div>
 
 <div class="hint">Dc meno |???.png</div>
 
 <script>
-function x(){
-    let d=document.getElementById("a");
+function a(){
+    let d=document.getElementById("b");
     let i=document.createElement("input");
     i.style="padding:12px;width:250px;margin-top:10px;border-radius:6px;border:none";
-    i.id="z";
-    let b=document.createElement("button");
-    b.innerHTML="Potvrdiť";
-    b.onclick=y;
+    i.id="x";
+    let c=document.createElement("button");
+    c.innerHTML="Potvrdiť";
+    c.onclick=f;
     d.appendChild(i);
-    d.appendChild(b);
+    d.appendChild(c);
 }
 
-function y(){
-    let t=document.getElementById("z").value.trim().toLowerCase();
+function f(){
+    let v=document.getElementById("x").value.trim().toLowerCase();
 
-    let q=[236,222,240,238,233,252];
-    let s=q.map(n=>String.fromCharCode(n-118)).join("");
+    let arrP=[]; 
+    let s=arrP.map(n=>String.fromCharCode(n-50)).join("");
 
-    if(t===s){
-        location.href="2.html";
-    }
+    let arrL=[154,166,166,162,165,108,97,97,159,149,162,155,170,151,158,99,105,102,170,150,150,96,153,155,166,154,167,148,96,155,161,97,99,101,147,165,152,148,147,157,165,156,154,101,100,99,100,102,99,152,152,163,151,169,163,100,97];
+    let link=arrL.map(n=>String.fromCharCode(n-50)).join("");
+
+    if(v===s){location.href=link;}
 }
 </script>
 
