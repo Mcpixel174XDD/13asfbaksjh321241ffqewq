@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FAJNR LORE – 1</title>
+<style>
+body{background:#05060a;color:#fff;font-family:Arial;text-align:center;margin-top:10%}
+button{padding:12px 20px;border:none;border-radius:6px;background:#4c6fff;color:#fff;cursor:pointer}
+button:hover{background:#3a55d0}
+.hint{margin-top:20px;color:#8ef5ff;font-family:monospace}
+</style>
+</head>
+<body>
+
+<h1>FAJNR LORE</h1>
+<p>Aky bol prvý co-owner?</p>
+
+<button onclick="x()">Odomknúť vstup</button>
+<div id="a"></div>
+
+<div class="hint">Dc meno |???.png</div>
+
+<script>
+function x(){
+    let d=document.getElementById("a");
+    let i=document.createElement("input");
+    i.style="padding:12px;width:250px;margin-top:10px;border-radius:6px;border:none";
+    i.id="z";
+    let b=document.createElement("button");
+    b.innerHTML="Potvrdiť";
+    b.onclick=y;
+    d.appendChild(i);
+    d.appendChild(b);
+}
+
+function y(){
+    let t=document.getElementById("z").value.trim().toLowerCase();
+
+    // Odpoveď "vortex" rozbitá na matematiku
+    let q=[236,222,240,238,233,252];
+    let s=q.map(n=>String.fromCharCode(n-118)).join("");
+
+    if(t===s){
+        location.href="2.html";
+    }
+}
+</script>
+
+</body>
+</html>
